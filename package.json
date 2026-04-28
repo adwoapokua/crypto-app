@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "In this assignment, you will integrate your cloned coinbase frontend with a backend API to build a functional cryptocurrency platform with authentication and dynamic data.",
   "main": "index.js",
- "scripts": {
-  "start": "node server.js",
-  "dev": "nodemon server.js"
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
   "repository": {
     "type": "git",
