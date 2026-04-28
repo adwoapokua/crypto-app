@@ -20,6 +20,11 @@ const userSchema = new mongoose.Schema(
       type: String,
       required: true,
       minlength: 6
+    },
+
+    image: {
+      type: String,
+      required: false,
     }
   },
   {
@@ -28,5 +33,9 @@ const userSchema = new mongoose.Schema(
 );
 
 const User = mongoose.model("User", userSchema);
+
+userSchema.pre("save", async function () {
+  this.password = await bcrypt.hash(this.password, 10)
+})
 
 export default User;
